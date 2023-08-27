@@ -6,7 +6,11 @@ const cors = require('cors')
 
 const app = express();
 
-app.use(cors())
+app.use(cors({
+  origin: ["https://fullstack-kanban-23gu.vercel.app"],
+  methods: ["GET","OPTIONS","PATCH","DELETE","POST","PUT"],
+  credentials: true
+}))
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
