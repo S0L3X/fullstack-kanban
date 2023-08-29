@@ -7,7 +7,7 @@ const cors = require('cors')
 const app = express();
 
 app.use(cors({
-  origin: 'https://fullstack-kanban.vercel.app'
+  origin: '*'
 }))
 app.use(logger('dev'));
 app.use(express.json());
